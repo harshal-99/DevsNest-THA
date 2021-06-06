@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.left {
+    width: 50vw;
+    border-right: 0.4em solid blue;
+}
+
+.right {
+    width: 50vw;
+}
+
+.noStyle {
+    list-style: none;
+}
+
+.Bold {
+    font-weight: bolder;
+}
+
+fieldset {
+    margin: auto 50rem;
+}
+
+legend, fieldset {
+    color: blue;
+}
+
