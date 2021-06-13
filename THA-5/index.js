@@ -58,7 +58,7 @@ function max_frequency(array) {
         }
     })
 
-    return `${result[0]} ( ${result[1]} times ) `
+    return `${result[0]} ( ${result[1]} times )`
 }
 
 // console.log(array_clone5([1, 2, 3]))
