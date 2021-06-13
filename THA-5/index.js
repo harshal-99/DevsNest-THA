@@ -1,12 +1,12 @@
-function array_clone1(input) {
+export function array_clone1(input) {
     return input.filter(x => x)
 }
 
-function array_clone2(input) {
+export function array_clone2(input) {
     return Array.from(input, x => x)
 }
 
-function array_clone3(input) {
+export function array_clone3(input) {
     const new_array = []
     input.forEach(element => {
         new_array.push(element)
@@ -14,31 +14,31 @@ function array_clone3(input) {
     return new_array
 }
 
-function array_clone4(input) {
+export function array_clone4(input) {
     return input.map(x => x)
 }
 
-function array_clone5(input) {
+export function array_clone5(input) {
     return input.slice()
 }
 
-function array_clone6(input) {
+export function array_clone6(input) {
     return input.splice(0, input.length)
 }
 
-function is_array(input) {
+export function is_array(input) {
     return input instanceof Array
 }
 
-function first(array, n = 1) {
+export function first(array, n = 1) {
     return array.splice(0, n)
 }
 
-function join_elements(array, separator = ',') {
+export function join_elements(array, separator = ',') {
     return array.join(separator)
 }
 
-function max_frequency(array) {
+export function max_frequency(array) {
     const freq = new Map()
     for (let i of array) {
         if (!freq.has(i)) {
@@ -79,4 +79,4 @@ function max_frequency(array) {
 // myColor = ["Red", "Green", "White", "Black"]
 // console.log(join_elements(myColor))
 
-console.log(max_frequency([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]))
+// console.log(max_frequency([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]))
