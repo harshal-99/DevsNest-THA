@@ -1,12 +1,18 @@
 function array_clone1(input) {
+    if (!input) return null
+    if (!(input instanceof Array)) return null
     return input.filter(x => x)
 }
 
 function array_clone2(input) {
+    if (!input) return null
+    if (!(input instanceof Array)) return null
     return Array.from(input, x => x)
 }
 
 function array_clone3(input) {
+    if (!input) return null
+    if (!(input instanceof Array)) return null
     const new_array = []
     input.forEach(element => {
         new_array.push(element)
@@ -15,22 +21,31 @@ function array_clone3(input) {
 }
 
 function array_clone4(input) {
+    if (!input) return null
+    if (!(input instanceof Array)) return null
     return input.map(x => x)
 }
 
 function array_clone5(input) {
+    if (!input) return null
+    if (!(input instanceof Array)) return null
     return input.slice()
 }
 
 function array_clone6(input) {
+    if (!input) return null
+    if (!(input instanceof Array)) return null
     return input.splice(0, input.length)
 }
 
 function is_array(input) {
+    if (!input) return null
     return input instanceof Array
 }
 
 function first(array, n = 1) {
+    if (!(array instanceof Array)) return null
+    if (!array) return null
     if (n <= 0) {
         return []
     }
@@ -38,10 +53,15 @@ function first(array, n = 1) {
 }
 
 function join_elements(array, separator = ',') {
+    if (!array) return null
+    if (!(array instanceof Array)) return null
     return array.join(separator)
 }
 
 function max_frequency(array) {
+    if (!array) return null
+    if (!(array instanceof Array)) return null
+
     const freq = new Map()
     for (let i of array) {
         if (!freq.has(i)) {
@@ -84,3 +104,5 @@ let expected  = first(array, 3)
 for (let i = 0; i < 3; i++) {
     console.log(array[i], expected[i])
 }*/
+
+console.log()
