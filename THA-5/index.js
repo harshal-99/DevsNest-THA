@@ -38,6 +38,12 @@ function array_clone6(input) {
     return input.splice(0, input.length)
 }
 
+function array_clone7(input) {
+    if (!input) return null
+    if (!(input instanceof Array)) return null
+    return [...input]
+}
+
 function is_array(input) {
     if (!input) return null
     return input instanceof Array
@@ -91,18 +97,9 @@ module.exports = {
     array_clone4: array_clone4,
     array_clone5: array_clone5,
     array_clone6: array_clone6,
+    array_clone7: array_clone7,
     is_array: is_array,
     first: first,
     join_elements: join_elements,
     max_frequency: max_frequency,
 }
-
-/*
-const array = [7, 9, 0, -2]
-let expected  = first(array, 3)
-
-for (let i = 0; i < 3; i++) {
-    console.log(array[i], expected[i])
-}*/
-
-console.log()
