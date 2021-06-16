@@ -25,7 +25,7 @@ function display_reading_status(library) {
     }
 }
 
-function Cylinder(radius, height) {
+function Cylinder(radius = 2, height = 2) {
     this.radius = radius;
     this.height = height;
 
