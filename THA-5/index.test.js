@@ -19,7 +19,7 @@ test('Object is not an array', () => {
 
 
 test('array_clone1', () => {
-    const array1 = [1, 2, 3, 4, 0]
+    const array1 = [1, 2, 3, 4, 0, 88, 55, 6, 5, 4, 5, 2, 14, 5, 6, 2, 8, 8825, 6, 2, 4, 52, 4, 8, 2, 8, 5, 4, 5, 5, 4, 8, 9, 6, 5, 5, 8, 584, 98, 95, 561, 54, 984, 51, 54, 98]
     const array2 = [1, 2, [4, 0], {}]
 
     const res1 = functions.array_clone1(array1)
@@ -36,7 +36,7 @@ test('array_clone1', () => {
 
 
 test('array_clone2', () => {
-    const array1 = [1, 2, 3, 4, 0]
+    const array1 = [1, 2, 3, 4, 0, 88, 55, 6, 5, 4, 5, 2, 14, 5, 6, 2, 8, 8825, 6, 2, 4, 52, 4, 8, 2, 8, 5, 4, 5, 5, 4, 8, 9, 6, 5, 5, 8, 584, 98, 95, 561, 54, 984, 51, 54, 98]
     const array2 = [1, 2, [4, 0], {}]
 
     const res1 = functions.array_clone2(array1)
@@ -52,7 +52,7 @@ test('array_clone2', () => {
 })
 
 test('array_clone3', () => {
-    const array1 = [1, 2, 3, 4, 0]
+    const array1 = [1, 2, 3, 4, 0, 88, 55, 6, 5, 4, 5, 2, 14, 5, 6, 2, 8, 8825, 6, 2, 4, 52, 4, 8, 2, 8, 5, 4, 5, 5, 4, 8, 9, 6, 5, 5, 8, 584, 98, 95, 561, 54, 984, 51, 54, 98]
     const array2 = [1, 2, [4, 0], {}]
 
     const res1 = functions.array_clone3(array1)
@@ -68,7 +68,7 @@ test('array_clone3', () => {
 })
 
 test('array_clone4', () => {
-    const array1 = [1, 2, 3, 4, 0]
+    const array1 = [1, 2, 3, 4, 0, 88, 55, 6, 5, 4, 5, 2, 14, 5, 6, 2, 8, 8825, 6, 2, 4, 52, 4, 8, 2, 8, 5, 4, 5, 5, 4, 8, 9, 6, 5, 5, 8, 584, 98, 95, 561, 54, 984, 51, 54, 98]
     const array2 = [1, 2, [4, 0], {}]
 
     const res1 = functions.array_clone4(array1)
@@ -84,7 +84,7 @@ test('array_clone4', () => {
 })
 
 test('array_clone5', () => {
-    const array1 = [1, 2, 3, 4, 0]
+    const array1 = [1, 2, 3, 4, 0, 88, 55, 6, 5, 4, 5, 2, 14, 5, 6, 2, 8, 8825, 6, 2, 4, 52, 4, 8, 2, 8, 5, 4, 5, 5, 4, 8, 9, 6, 5, 5, 8, 584, 98, 95, 561, 54, 984, 51, 54, 98]
     const array2 = [1, 2, [4, 0], {}]
 
     const res1 = functions.array_clone5(array1)
@@ -100,11 +100,27 @@ test('array_clone5', () => {
 })
 
 test('array_clone6', () => {
-    const array1 = [1, 2, 3, 4, 0]
+    const array1 = [1, 2, 3, 4, 0, 88, 55, 6, 5, 4, 5, 2, 14, 5, 6, 2, 8, 8825, 6, 2, 4, 52, 4, 8, 2, 8, 5, 4, 5, 5, 4, 8, 9, 6, 5, 5, 8, 584, 98, 95, 561, 54, 984, 51, 54, 98]
     const array2 = [1, 2, [4, 0], {}]
 
     const res1 = functions.array_clone6(array1)
     const res2 = functions.array_clone6(array2)
+
+    array1.forEach((value, index, res1) => {
+        expect(value).toEqual(res1[index])
+    })
+
+    array2.forEach((value, index, res2) => {
+        expect(value).toEqual(res2[index])
+    })
+})
+
+test('array_clone7', () => {
+    const array1 = [1, 2, 3, 4, 0, 88, 55, 6, 5, 4, 5, 2, 14, 5, 6, 2, 8, 8825, 6, 2, 4, 52, 4, 8, 2, 8, 5, 4, 5, 5, 4, 8, 9, 6, 5, 5, 8, 584, 98, 95, 561, 54, 984, 51, 54, 98]
+    const array2 = [1, 2, [4, 0], {}]
+
+    const res1 = functions.array_clone7(array1)
+    const res2 = functions.array_clone7(array2)
 
     array1.forEach((value, index, res1) => {
         expect(value).toEqual(res1[index])
