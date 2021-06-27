@@ -17,6 +17,9 @@
 
 .wrapper {
     padding: 0.9rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    border: 0.2rem solid black;
 }
 
 .correct {

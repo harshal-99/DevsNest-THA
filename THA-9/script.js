@@ -1,7 +1,7 @@
 import questions from "./questions.js";
 
 class Quiz {
-    constructor(container) {
+    constructor(container, questions) {
         this.container = container
         this.questions = questions
     }
@@ -14,20 +14,21 @@ class Quiz {
             const optionsDiv = document.createElement('div')
             const buttons = this.createButtons()
 
-            this.setButtonText(questions[i], buttons, i)
+            this.setButtonText(this.questions[i], buttons, i)
 
 
             questionDiv.classList.add('question')
             questionDiv.setAttribute('id', 'question')
-            questionDiv.innerText = questions[i]['name']
+            questionDiv.innerText = `${i + 1}) ${questions[i]['name']}`
 
             optionsDiv.setAttribute('id', 'options')
             optionsDiv.append(buttons[0], buttons[1], buttons[2], buttons[3])
             optionsDiv.addEventListener('click', (ev) => {
                 if (ev && ev.target.nodeName === 'BUTTON') {
                     let btn = ev.target
-                    if(btn.buttonIndex === this.questions[btn.questionIndex]['answer']) {
+                    if (btn.buttonIndex === this.questions[btn.questionIndex]['answer']) {
                         btn.classList.toggle('correct')
+
                     } else {
                         btn.classList.toggle('incorrect')
                     }
@@ -60,7 +61,8 @@ class Quiz {
 
 
 const quiz = new Quiz(
-    document.querySelector('.container')
+    document.querySelector('.container'),
+    questions
 )
 
 quiz.start()
