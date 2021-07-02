@@ -1,0 +1,23 @@
+body, div {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+li button {
+    color: #666;
+}
+
+button {
+    width: auto;
+}
+
+
+li {
+    display: grid;
+    grid-template-columns: auto 5em 5em;
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
