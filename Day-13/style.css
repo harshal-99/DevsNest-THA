@@ -1,0 +1,21 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    min-width: 45vw;
+    max-width: 70vw;
+}
+
+.card-body {
+    padding: 0.4rem;
+}
+
+.side-column {
+    width: 25vw;
+    padding: 0.2rem;
+}
