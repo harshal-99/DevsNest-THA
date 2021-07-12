@@ -1,0 +1,23 @@
+.square {
+	border-color: black;
+	background-color: black;
+	border-width: 1rem;
+	width: 2rem;
+	height: 2rem;
+}
+
+.eight-square {
+	display: flex;
+	flex-direction: row;
+}
+
+
+
+.chess-board {
+	display: flex;
+	flex-direction: column;
+}
+
+#root {
+	margin: 0 auto;
+}
