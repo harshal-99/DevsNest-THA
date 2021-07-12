@@ -1,40 +1,24 @@
 import React from 'react';
 import './App.css';
 
-function Square() {
-	return (
-		<div className="square">
-
-		</div>
-	)
-}
-
-function EightSquare() {
-	return (
-		<div className="eight-square">
-			<Square/>
-			<Square/>
-			<Square/>
-			<Square/>
-			<Square/>
-			<Square/>
-			<Square/>
-			<Square/>
-		</div>
-	)
-}
-
 function ChessBoard() {
+	let boxes = []
+	for(let i = 0; i < 8; i++) {
+		boxes.push(<div className="square"/>)
+	}
+
 	return (
-		<div className="chess-board">
-			<EightSquare/>
-			<EightSquare/>
-			<EightSquare/>
-			<EightSquare/>
-			<EightSquare/>
-			<EightSquare/>
-			<EightSquare/>
-			<EightSquare/>
+		<div className="App">
+			<div className="chessBoard">
+				<div className="row">{boxes}</div>
+				<div className="row">{boxes}</div>
+				<div className="row">{boxes}</div>
+				<div className="row">{boxes}</div>
+				<div className="row">{boxes}</div>
+				<div className="row">{boxes}</div>
+				<div className="row">{boxes}</div>
+				<div className="row">{boxes}</div>
+			</div>
 		</div>
 	)
 }
