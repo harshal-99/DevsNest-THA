@@ -1,0 +1,26 @@
+.Card {
+	width: 40rem;
+	height: max-content;
+	/* border: 1px solid red; */
+	background: olivedrab;
+	padding: 5px;
+	margin: 6px;
+	border-radius: 5px;
+	box-shadow: 3px 1px 9px -1px #3d581a;
+	/*padding: 15px;*/
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+button {
+	width: 4rem;
+	height: 1.5rem;
+	padding: 0;
+}
+p {
+	text-align: center;
+}
